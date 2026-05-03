@@ -1,18 +1,18 @@
 class Node:
-    def _init_(self,data):
+    def __init__(self,data):
         self.data=data
         self.next=None
 
 #Lista enlazada simple
 class listaEnlazada:
-    def _init_(self):
+    def __init__(self):
         self.head=None
 
     #Insertar al inicio
     def insert_at_first(self, data):
         new_node=Node(data)
         new_node.next=self.head
-        new_node=self.head
+        self.head=new_node
 
     #Insertar al final
     def insert_at_end(self, data):
@@ -104,6 +104,7 @@ class listaEnlazada:
             sgte = current.next
             current.next=prev
             prev=current
+            current=sgte
 
     def sort(self):
         if self.head is None:

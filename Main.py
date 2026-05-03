@@ -1,7 +1,4 @@
 import Menu
 
 class Main:
-    Menu.tipoLista()    
-    
-
-
+    Menu.mainSimple()   

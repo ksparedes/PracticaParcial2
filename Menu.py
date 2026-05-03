@@ -3,21 +3,7 @@ import Listas
 list = Listas.listaEnlazada()
 
 
-def tipoLista():
-    print("Elija la lista con la que desea trabajar :")
-    print("1. Lista Enlazada Simple")
-    print("2. Lista Enlazada Circular")
-    print("3. Salir")
-    lista = input("opción:  ")
-
-    if lista == "1":
-        mostrarMenu1()  
-    elif lista == "2":
-        print("Lista Circular")
-    elif lista == "3":
-        print("Saliendo...")
-    else:
-        print("Opción no válida. Por favor, elija una opción válida.")  
+#Menu para lista enlazada simple     
 
 def mostrarMenu1():
     print("1. Insertar al inicio")
@@ -39,13 +25,13 @@ def mainSimple():
         op=input("Digite su opción " )
 
         if op=="1":
-            n = input("Digite el valor a insertar: ")
-            list.insert_at_first(n)
+            data = input("Digite el valor a insertar: ")
+            list.insert_at_first(data)
 
 
         if op=="2":
-            n = input("Digite el valor a insertar: ")
-            list.insert_at_end(n)
+            data = input("Digite el valor a insertar: ")
+            list.insert_at_end(data)
 
         if op=="3":
             list.display()
